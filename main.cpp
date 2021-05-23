@@ -4,6 +4,15 @@
 
 using namespace std;
 
+void vet(int &x, int y, int *w, int *z)
+{
+    cout << endl;
+    cout <<"Ponteiro para o vetor: " <<" " << x <<endl;
+    cout <<"Quantidade de números inteiros no vetor: " <<" " << y <<endl;
+    cout <<"Endereço do máximo valor no vetor: " <<" " << w <<endl;
+    cout <<"Endereço do mínimo valor no vetor: " <<" " << z <<endl;
+}
+
 int main()
 {
     int k;
@@ -55,6 +64,12 @@ int main()
     cout << endl;
     cout << "Máximo elemento no vetor = " << maximo << endl;
     cout << "Mínimo elemento no vetor = " << minimo << endl;
+
+    int *ptr_vet;
+
+    ptr_vet = &v[k];
+
+    vet(*ptr_vet, k, &maximo, &minimo);
 
     return 0;
 }
